@@ -1,7 +1,7 @@
-const jwt = require("jsonwebtoken");
-const User = require("../models/user.model");
+import jwt from "jsonwebtoken"
+import User from "../models/user.model.js"
 
-const protectedRoute = async(req, res, next) => {
+export const protectedRoute = async(req, res, next) => {
     try {
         const token = req.cookies.jwt;
 
@@ -30,5 +30,3 @@ const protectedRoute = async(req, res, next) => {
       return res.status(500).json({ message: "Internal Serer Error" })  
     }
 }
-
-module.exports = { protectedRoute }
