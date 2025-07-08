@@ -1,4 +1,4 @@
-import { LogOut, MessageSquare, Settings, User } from 'lucide-react'
+import { LogOut, MessageSquare, Settings, User, UserRoundPlus } from 'lucide-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAuthStore } from '../store/useAuthStore'
@@ -23,12 +23,12 @@ const Navbar = () => {
             { authUser && (
               <>
               <Link to={"/addFriends"} className='btn btn-sm gap-2'>
-                  <User className='size-5' />
-                  <span className='hidden sm:inline'>Add friends</span>
+                  <UserRoundPlus className='size-5' />
+                  <span>Add friends</span>
                 </Link>
                 <Link to={"/profile"} className='btn btn-sm gap-2'>
                   <User className='size-5' />
-                  <span className='hidden sm:inline'>Profile</span>
+                  <span>Profile</span>
                 </Link>
 
                 <button className='flex gap-2 items-center cursor-pointer' onClick={logout}>
