@@ -34,9 +34,9 @@ const Signup = () => {
 
 
   return (
-    <div className='min-h-screen grid lg:grid-cols-2'>
+    <div className='flex justify-center items-center'>
       {/* left side */}
-      <div className='flex flex-col justify-center items-center p-6 sm:p-12'>
+      <div className='flex flex-col justify-center items-center p-6 sm:p-12 w-full md:w-3/4'>
         <div className='w-full max-w-md space-y-8'>
           {/* logo */}
           <div className='text-center mb-8'>
@@ -56,12 +56,10 @@ const Signup = () => {
               </label>
 
               <div className='relative'>
-                <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
-                  <User className='size-5 text-base-content/40' />
-                </div>
+                
                 <input 
                   type='text'
-                  className='input input-bordered w-full pl-10'
+                  className='input input-bordered w-full pl-3'
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                 />
@@ -74,12 +72,10 @@ const Signup = () => {
               </label>
 
               <div className='relative'>
-                <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
-                  <Mail className='size-5 text-base-content/40' />
-                </div>
+                
                 <input 
                   type='email'
-                  className='input input-bordered w-full pl-10'
+                  className='input input-bordered w-full pl-3'
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
@@ -92,12 +88,10 @@ const Signup = () => {
               </label>
 
               <div className='relative'>
-                <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
-                  <Lock className='size-5 text-base-content/40' />
-                </div>
+               
                 <input 
                   type={showPassword ? "text" : "password"}
-                  className={`input input-bordered w-full pl-10`}
+                  className={`input input-bordered w-full pl-3`}
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />

@@ -10,6 +10,7 @@ export const useAuthStore = create((set, get) => ({
     isSigningUp: false,
     isLoggingUp: false,
     isUpdatingProfile: false,
+    isUpdatingFriends: false,
     isCheckingAuth: true,
     isLoggingIn: false,
     onlineUsers: [],
@@ -90,6 +91,22 @@ export const useAuthStore = create((set, get) => ({
             toast.error(error.response.data.message);
         } finally{
             set({ isUpdatingProfile: false });
+        }
+    },
+
+    addFriend: async(data) => {
+        set({ isUpdatingFriends: true });
+        try {
+            const res = await axiosInstance.put("/user/addToFriends", data);
+
+            set({ authUser: res.data.user });
+            toast.success(res.data.message);
+
+        } catch (error) {
+            console.log("error in adding to friends: ", error);
+            toast.error(error.response.data.message);
+        } finally{
+           set({ isUpdatingFriends: false }); 
         }
     },
 
