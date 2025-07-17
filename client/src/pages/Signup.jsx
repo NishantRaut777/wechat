@@ -59,7 +59,7 @@ const Signup = () => {
                 
                 <input 
                   type='text'
-                  className='input input-bordered w-full pl-3'
+                  className='w-full p-2 mt-1 border border-gray-400 rounded-md focus:ring-black-400'
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                 />
@@ -75,7 +75,7 @@ const Signup = () => {
                 
                 <input 
                   type='email'
-                  className='input input-bordered w-full pl-3'
+                  className='w-full p-2 mt-1 border border-gray-400 rounded-md focus:ring-black-400'
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
@@ -91,7 +91,7 @@ const Signup = () => {
                
                 <input 
                   type={showPassword ? "text" : "password"}
-                  className={`input input-bordered w-full pl-3`}
+                  className={`w-full p-2 mt-1 border border-gray-400 rounded-md focus:ring-black-400`}
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />

@@ -45,7 +45,7 @@ const Login = () => {
               <div className="relative">                
                 <input
                   type="email"
-                  className={`input input-bordered w-full pl-3`}
+                  className={`w-full p-2 mt-1 border border-gray-400 rounded-md focus:ring-black-400`}
                   placeholder="you@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -60,7 +60,7 @@ const Login = () => {
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
-                  className={`input input-bordered w-full pl-3`}
+                  className={`w-full p-2 mt-1 border border-gray-400 rounded-md focus:ring-black-400`}
                   placeholder="••••••••"
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
@@ -71,9 +71,9 @@ const Login = () => {
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? (
-                    <EyeOff className="h-5 w-5 text-base-content/40" />
+                    <EyeOff className="h-5 w-5 text-base-content/40 cursor-pointer" />
                   ) : (
-                    <Eye className="h-5 w-5 text-base-content/40" />
+                    <Eye className="h-5 w-5 text-base-content/40 cursor-pointer" />
                   )}
                 </button>
               </div>
